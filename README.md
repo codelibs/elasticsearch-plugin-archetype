@@ -55,7 +55,7 @@ A service component is generated as \<pluginName\>Module and \<pluginName\>Servi
 You can put your code into \<pluginName\>Service.
 \<pluginName\>Service is injected to other components in elasticsearch.
 
-If a service is not necessary, remove \<pluginName\>Module and \<pluginName\>Service classes and the definistion in \<pluginName\>Plugin class.
+If a service is not necessary, remove \<pluginName\>Module, \<pluginName\>Service and the definistion in \<pluginName\>Plugin class.
 
 ## To Create Rest API
 
@@ -80,5 +80,5 @@ To register your river,
         "type" : "<riverName>"
     }'
 
-If a river is not necessary, remove \<pluginName\>RiverModule and \<pluginName\>River classes and the definistion in \<pluginName\>Plugin class.
+If a river is not necessary, remove \<pluginName\>RiverModule, \<pluginName\>River and the definistion in \<pluginName\>Plugin class.
 
