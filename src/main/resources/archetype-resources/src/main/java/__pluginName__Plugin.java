@@ -31,7 +31,7 @@ public class ${pluginName}Plugin extends AbstractPlugin {
 
     // for River
     public void onModule(final RiversModule module) {
-        module.registerRiver("${artifactId}", ${pluginName}RiverModule.class);
+        module.registerRiver("${riverName}", ${pluginName}RiverModule.class);
     }
 
     // for Service

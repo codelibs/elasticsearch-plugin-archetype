@@ -12,6 +12,7 @@ for file in `find $JAVA_SRC_DIR -type f` ; do
          -e 's/org.codelibs.elasticsearch.sample/\${package}/g' \
          -e 's/Sample/\${pluginName}/g' \
          -e 's/_sample/_\${restName}/g' \
+         -e 's/registerRiver("sample/registerRiver("\${riverName}/g' \
          -e 's/sample/\${artifactId}/g' \
         $file > $JAVA_NEW_FILE
 done
