@@ -1,5 +1,5 @@
-Maven Archetype for Elasticsearch plugin
-========================================
+Elasticsearch Plugin Archetype
+==============================
 
 ## Overview
 
@@ -49,36 +49,36 @@ For example, the command is below:
         -Dversion=1.0-SNAPSHOT \
         -DpluginName=Hello 
 
-## To Develop Service
+## To Create Service
 
-A service component is generated as <pluginName>Module and <pluginName>Service classes.
-You can put your code into <pluginName>Service.
-<pluginName>Service is injected to other components in elasticsearch.
+A service component is generated as \<pluginName\>Module and \<pluginName\>Service classes.
+You can put your code into \<pluginName\>Service.
+\<pluginName\>Service is injected to other components in elasticsearch.
 
-If a service is not necessary, remove <pluginName>Module and <pluginName>Service classes and the definistion in <pluginName>Plugin class.
+If a service is not necessary, remove \<pluginName\>Module and \<pluginName\>Service classes and the definistion in \<pluginName\>Plugin class.
 
-## To Develop Rest API
+## To Create Rest API
 
-A class file for Rest API is <pluginName>RestAction.
-You can put your code into <pluginName>RestAction.
-The urls to access to <pluginName>RestAction are:
+A class file for Rest API is \<pluginName\>RestAction.
+You can put your code into \<pluginName\>RestAction.
+The urls to access to \<pluginName\>RestAction are:
 
     http://localhost:9200/{index}/{type}/_<restName>
     http://localhost:9200/{index}/_<restName>
 
-The definistion is in a constructor of <pluginName>RestAction.
+The definistion is in a constructor of \<pluginName\>RestAction.
 
-If a rest API is not necessary, remove <pluginName>RestAction class and the definistion in <pluginName>Plugin class.
+If a rest API is not necessary, remove \<pluginName\>RestAction class and the definistion in \<pluginName\>Plugin class.
 
-## To Develop River
+## To Create River
 
-A river component is generated as <pluginName>RiverModule and <pluginName>River.
-You can put your code into <pluginName>River.
+A river component is generated as \<pluginName\>RiverModule and \<pluginName\>River.
+You can put your code into \<pluginName\>River.
 To register your river, 
 
     $ curl -XPUT 'localhost:9200/_river/my_river/_meta' -d '{
         "type" : "<riverName>"
     }'
 
-If a river is not necessary, remove <pluginName>RiverModule and <pluginName>River classes and the definistion in <pluginName>Plugin class.
+If a river is not necessary, remove \<pluginName\>RiverModule and \<pluginName\>River classes and the definistion in \<pluginName\>Plugin class.
 
