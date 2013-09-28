@@ -11,11 +11,10 @@ You can easily create your elasticsearch plugin by this archetype.
 Using archetype:generate goal of Maven, run the following command:
 
     $ mvn archetype:generate \
-        -DarchetypeRepository=http://maven.codelibs.org/ \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.0.0-SNAPSHOT \
-        -DelasticsearchVersion=0.90.3 \
+        -DarchetypeVersion=1.0.0 \
+        -DelasticsearchVersion=0.90.5 \
         -DgroupId=<Your groupId> \
         -DartifactId=<your artifactId> \
         -Dversion=<your version> \
@@ -27,7 +26,7 @@ Properties description is below:
 
 | Property Name        | Description           | Example             |
 |:--------------------:|:---------------------:|:-------------------:|
-| elasticsearchVersion | Elasticsearch version | 0.90.3              |
+| elasticsearchVersion | Elasticsearch version | 0.90.5              |
 | groupId              | Project's groupId     | com.example         |
 | artifactId           | Project's artifactid  | elasticsearch-hello |
 | version              | Project's version     | 1.0-SNAPSHOT        |
@@ -40,10 +39,9 @@ elasticsearchVersion and restName are optional.
 For example, the command is below:
 
     $ mvn archetype:generate \
-        -DarchetypeRepository=http://maven.codelibs.org/ \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.0.0-SNAPSHOT \
+        -DarchetypeVersion=1.0.0 \
         -DgroupId=com.example \
         -DartifactId=elasticsearch-hello \
         -Dversion=1.0-SNAPSHOT \
