@@ -9,7 +9,7 @@
 	<version>${version}</version>
 	<packaging>jar</packaging>
 	<description>elasticsearch ${artifactId} plugin</description>
-	<inceptionYear>2013</inceptionYear>
+	<inceptionYear>2014</inceptionYear>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>

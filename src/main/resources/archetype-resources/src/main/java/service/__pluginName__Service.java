@@ -1,6 +1,6 @@
 package ${package}.service;
 
-import org.elasticsearch.ElasticSearchException;
+import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.common.component.AbstractLifecycleComponent;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.settings.Settings;
@@ -16,21 +16,21 @@ public class ${pluginName}Service extends AbstractLifecycleComponent<${pluginNam
     }
 
     @Override
-    protected void doStart() throws ElasticSearchException {
+    protected void doStart() throws ElasticsearchException {
         logger.info("START ${pluginName}Service");
 
         // TODO Your code..
     }
 
     @Override
-    protected void doStop() throws ElasticSearchException {
+    protected void doStop() throws ElasticsearchException {
         logger.info("STOP ${pluginName}Service");
 
         // TODO Your code..
     }
 
     @Override
-    protected void doClose() throws ElasticSearchException {
+    protected void doClose() throws ElasticsearchException {
         logger.info("CLOSE ${pluginName}Service");
 
         // TODO Your code..
