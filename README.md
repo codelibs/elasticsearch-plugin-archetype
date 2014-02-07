@@ -6,6 +6,14 @@ Elasticsearch Plugin Archetype
 This project (elasticsearch-plugin-archetype) provides Maven archetype for Elasticsearch plugin.
 You can easily create your elasticsearch plugin by this archetype.
 
+## Version
+
+| River Web | elasticsearch |
+|:---------:|:-------------:|
+| master    | 1.0.0.X       |
+| 1.1.0     | 1.0.0.RC2     |
+| 1.0.0     | 0.90.5        |
+
 ## Usage
 
 Using archetype:generate goal of Maven, run the following command:
@@ -13,7 +21,7 @@ Using archetype:generate goal of Maven, run the following command:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.0.0 \
+        -DarchetypeVersion=1.1.0 \
         -DelasticsearchVersion=0.90.5 \
         -DgroupId=<Your groupId> \
         -DartifactId=<your artifactId> \
@@ -26,7 +34,7 @@ Properties description is below:
 
 | Property Name        | Description           | Example             |
 |:--------------------:|:---------------------:|:-------------------:|
-| elasticsearchVersion | Elasticsearch version | 0.90.5              |
+| elasticsearchVersion | Elasticsearch version | 1.0.0.RC2           |
 | groupId              | Project's groupId     | com.example         |
 | artifactId           | Project's artifactid  | elasticsearch-hello |
 | version              | Project's version     | 1.0-SNAPSHOT        |
@@ -41,7 +49,7 @@ For example, the command is below:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.0.0 \
+        -DarchetypeVersion=1.1.0 \
         -DgroupId=com.example \
         -DartifactId=elasticsearch-hello \
         -Dversion=1.0-SNAPSHOT \
