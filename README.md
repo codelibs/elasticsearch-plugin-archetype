@@ -22,7 +22,7 @@ Using archetype:generate goal of Maven, run the following command:
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
         -DarchetypeVersion=1.1.0 \
-        -DelasticsearchVersion=0.90.5 \
+        -DelasticsearchVersion=1.0.0.RC2 \
         -DgroupId=<Your groupId> \
         -DartifactId=<your artifactId> \
         -Dversion=<your version> \
