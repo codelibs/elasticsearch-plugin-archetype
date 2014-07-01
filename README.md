@@ -11,6 +11,7 @@ You can easily create your elasticsearch plugin by this archetype.
 | River Web | elasticsearch |
 |:---------:|:-------------:|
 | master    | 1.0.0.X       |
+| 1.2.0     | 1.2.1         |
 | 1.1.0     | 1.0.0.RC2     |
 | 1.0.0     | 0.90.5        |
 
@@ -21,8 +22,8 @@ Using archetype:generate goal of Maven, run the following command:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.1.0 \
-        -DelasticsearchVersion=1.0.0.RC2 \
+        -DarchetypeVersion=1.2.0 \
+        -DelasticsearchVersion=1.2.1 \
         -DgroupId=<Your groupId> \
         -DartifactId=<your artifactId> \
         -Dversion=<your version> \
@@ -49,7 +50,7 @@ For example, the command is below:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.1.0 \
+        -DarchetypeVersion=1.2.0 \
         -DgroupId=com.example \
         -DartifactId=elasticsearch-hello \
         -Dversion=1.0-SNAPSHOT \
