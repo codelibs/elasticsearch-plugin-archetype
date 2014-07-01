@@ -45,7 +45,7 @@ sed \
     -e 's/Sample/\${pluginName}/g' \
     -e 's/elasticsearch-plugin-sample/\${artifactId}/g' \
     -e 's/sample/\${artifactId}/g' \
-    -e 's/<version>1.1.0-SNAPSHOT</<version>\${version}</g' \
+    -e 's/<version>1.2.0-SNAPSHOT</<version>\${version}</g' \
     -e 's/<elasticsearch.version>.*</<elasticsearch.version>\${elasticsearchVersion}</g' \
     -e "s/<inceptionYear>.*</<inceptionYear>$THIS_YEAR</g" \
     $POM_FILE >> $POM_DIR/pom.xml
