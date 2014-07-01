@@ -35,7 +35,7 @@ Properties description is below:
 
 | Property Name        | Description           | Example             |
 |:--------------------:|:---------------------:|:-------------------:|
-| elasticsearchVersion | Elasticsearch version | 1.0.0.RC2           |
+| elasticsearchVersion | Elasticsearch version | 1.2.1               |
 | groupId              | Project's groupId     | com.example         |
 | artifactId           | Project's artifactid  | elasticsearch-hello |
 | version              | Project's version     | 1.0-SNAPSHOT        |
