@@ -15,6 +15,12 @@ You can easily create your elasticsearch plugin by this archetype.
 | 1.1.0     | 1.0.0.RC2     |
 | 1.0.0     | 0.90.5        |
 
+
+### Issues/Questions
+
+Please file an [issue](https://github.com/codelibs/elasticsearch-plugin-archetype/issues "issue").
+(Japanese forum is [here](https://github.com/codelibs/codelibs-ja-forum "here").)
+
 ## Usage
 
 Using archetype:generate goal of Maven, run the following command:
