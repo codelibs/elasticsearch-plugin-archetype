@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VERSION=1.3.0-SNAPSHOT
+
 JAVA_SRC_DIR=../elasticsearch-plugin-sample/src/main/java/org/codelibs/elasticsearch/sample/
 JAVA_DIR=src/main/resources/archetype-resources/src/main/java
 for file in `find $JAVA_SRC_DIR -type f` ; do
@@ -45,7 +47,7 @@ sed \
     -e 's/Sample/\${pluginName}/g' \
     -e 's/elasticsearch-plugin-sample/\${artifactId}/g' \
     -e 's/sample/\${artifactId}/g' \
-    -e 's/<version>1.2.0-SNAPSHOT</<version>\${version}</g' \
+    -e "s/<version>$VERSION</<version>\${version}</g" \
     -e 's/<elasticsearch.version>.*</<elasticsearch.version>\${elasticsearchVersion}</g' \
     -e "s/<inceptionYear>.*</<inceptionYear>$THIS_YEAR</g" \
     $POM_FILE >> $POM_DIR/pom.xml
