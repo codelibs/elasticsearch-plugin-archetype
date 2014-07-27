@@ -10,7 +10,8 @@ You can easily create your elasticsearch plugin by this archetype.
 
 | River Web | elasticsearch |
 |:---------:|:-------------:|
-| master    | 1.0.0.X       |
+| master    | 1.3.X         |
+| 1.3.0     | 1.3.0         |
 | 1.2.0     | 1.2.1         |
 | 1.1.0     | 1.0.0.RC2     |
 | 1.0.0     | 0.90.5        |
@@ -28,8 +29,8 @@ Using archetype:generate goal of Maven, run the following command:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.2.0 \
-        -DelasticsearchVersion=1.2.1 \
+        -DarchetypeVersion=1.3.0 \
+        -DelasticsearchVersion=1.3.0 \
         -DgroupId=<Your groupId> \
         -DartifactId=<your artifactId> \
         -Dversion=<your version> \
@@ -41,7 +42,7 @@ Properties description is below:
 
 | Property Name        | Description           | Example             |
 |:--------------------:|:---------------------:|:-------------------:|
-| elasticsearchVersion | Elasticsearch version | 1.2.1               |
+| elasticsearchVersion | Elasticsearch version | 1.3.0               |
 | groupId              | Project's groupId     | com.example         |
 | artifactId           | Project's artifactid  | elasticsearch-hello |
 | version              | Project's version     | 1.0-SNAPSHOT        |
@@ -56,7 +57,7 @@ For example, the command is below:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.2.0 \
+        -DarchetypeVersion=1.3.0 \
         -DgroupId=com.example \
         -DartifactId=elasticsearch-hello \
         -Dversion=1.0-SNAPSHOT \
