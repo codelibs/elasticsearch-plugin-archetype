@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.3.0-SNAPSHOT
+VERSION=1.4.0-SNAPSHOT
 
 JAVA_SRC_DIR=../elasticsearch-plugin-sample/src/main/java/org/codelibs/elasticsearch/sample/
 JAVA_DIR=src/main/resources/archetype-resources/src/main/java

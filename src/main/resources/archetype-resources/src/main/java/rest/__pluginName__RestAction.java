@@ -20,12 +20,12 @@ public class ${pluginName}RestAction extends BaseRestHandler {
 
     @Inject
     public ${pluginName}RestAction(final Settings settings, final Client client,
-            final RestController restController) {
-        super(settings, client);
+            final RestController controller) {
+        super(settings, controller, client);
 
-        restController.registerHandler(RestRequest.Method.GET,
+        controller.registerHandler(RestRequest.Method.GET,
                 "/{index}/{type}/_${restName}", this);
-        restController.registerHandler(RestRequest.Method.GET,
+        controller.registerHandler(RestRequest.Method.GET,
                 "/{index}/_${restName}", this);
     }
 
