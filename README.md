@@ -10,7 +10,8 @@ You can easily create your elasticsearch plugin by this archetype.
 
 | Version   | elasticsearch |
 |:---------:|:-------------:|
-| master    | 1.3.X         |
+| master    | 1.5.X         |
+| 1.5.0     | 1.5.2         |
 | 1.4.0     | 1.4.0.Beta1   |
 | 1.3.0     | 1.3.0         |
 | 1.2.0     | 1.2.1         |
@@ -30,14 +31,13 @@ Using archetype:generate goal of Maven, run the following command:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.4.0 \
-        -DelasticsearchVersion=1.4.0.Beta1 \
+        -DarchetypeVersion=1.5.0 \
+        -DelasticsearchVersion=1.5.2 \
         -DgroupId=<Your groupId> \
         -DartifactId=<your artifactId> \
         -Dversion=<your version> \
         -DpluginName=<your plugin name> \
-        -DrestName=<your rest API name> \
-        -DriverName=<your river name> 
+        -DrestName=<your rest API name>
 
 Properties description is below:
 
@@ -49,7 +49,6 @@ Properties description is below:
 | version              | Project's version     | 1.0-SNAPSHOT        |
 | pluginName           | Plugin class name     | Hello               |
 | restName             | Rest API name         | hello               |
-| riverName            | River name            | hello               |
 
 elasticsearchVersion and restName are optional.
 
@@ -84,16 +83,4 @@ The urls to access to \<pluginName\>RestAction are:
 The definistion is in a constructor of \<pluginName\>RestAction.
 
 If a rest API is not necessary, remove \<pluginName\>RestAction class and the definistion in \<pluginName\>Plugin class.
-
-## To Create River
-
-A river component is generated as \<pluginName\>RiverModule and \<pluginName\>River.
-You can put your code into \<pluginName\>River.
-To register your river, 
-
-    $ curl -XPUT 'localhost:9200/_river/my_river/_meta' -d '{
-        "type" : "<riverName>"
-    }'
-
-If a river is not necessary, remove \<pluginName\>RiverModule, \<pluginName\>River and the definistion in \<pluginName\>Plugin class.
 

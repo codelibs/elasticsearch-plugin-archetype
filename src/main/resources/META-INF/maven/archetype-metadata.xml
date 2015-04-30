@@ -3,12 +3,9 @@
   <requiredProperties>
     <requiredProperty key="pluginName"/>
     <requiredProperty key="elasticsearchVersion">
-      <defaultValue>1.4.0</defaultValue>
+      <defaultValue>1.5.2</defaultValue>
     </requiredProperty>
     <requiredProperty key="restName">
-      <defaultValue>hello</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="riverName">
       <defaultValue>hello</defaultValue>
     </requiredProperty>
   </requiredProperties>

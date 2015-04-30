@@ -4,11 +4,9 @@
   <sources>
     <source>src/main/java/action/IndexAction.java</source>
     <source>src/main/java/module/SampleModule.java</source>
-    <source>src/main/java/module/SampleRiverModule.java</source>
     <source>src/main/java/rest/SampleRestAction.java</source>
     <source>src/main/java/service/SampleService.java</source>
     <source>src/main/java/SamplePlugin.java</source>
-    <source>src/main/java/river/SampleRiver.java</source>
   </sources>
   <resources>
     <resource>src/main/assemblies/plugin.xml</resource>

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.4.0-SNAPSHOT
+VERSION=1.5.0-SNAPSHOT
 
 JAVA_SRC_DIR=../elasticsearch-plugin-sample/src/main/java/org/codelibs/elasticsearch/sample/
 JAVA_DIR=src/main/resources/archetype-resources/src/main/java
@@ -14,7 +14,6 @@ for file in `find $JAVA_SRC_DIR -type f` ; do
          -e 's/org.codelibs.elasticsearch.sample/\${package}/g' \
          -e 's/Sample/\${pluginName}/g' \
          -e 's/_sample/_\${restName}/g' \
-         -e 's/registerRiver("sample/registerRiver("\${riverName}/g' \
          -e 's/sample/\${artifactId}/g' \
         $file > $JAVA_NEW_FILE
 done
@@ -29,10 +28,12 @@ PROP_FILE=../elasticsearch-plugin-sample/src/main/resources/es-plugin.properties
 PROP_DIR=src/main/resources/archetype-resources/src/main/resources
 mkdir -p $PROP_DIR
 echo "Creating $PROP_DIR/es-plugin.properties"
+echo "#set(\$dollar = '\$')##" > $PROP_DIR/es-plugin.properties
 sed \
+    -e 's/\$/\${dollar}/g' \
     -e 's/org.codelibs.elasticsearch.sample/\${package}/g' \
     -e 's/Sample/\${pluginName}/g' \
-    $PROP_FILE > $PROP_DIR/es-plugin.properties
+    $PROP_FILE >> $PROP_DIR/es-plugin.properties
 
 THIS_YEAR=`date '+%Y'`
 POM_FILE=../elasticsearch-plugin-sample/pom.xml

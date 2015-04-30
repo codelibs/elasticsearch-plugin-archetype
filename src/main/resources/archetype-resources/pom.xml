@@ -9,7 +9,7 @@
 	<version>${version}</version>
 	<packaging>jar</packaging>
 	<description>elasticsearch ${artifactId} plugin</description>
-	<inceptionYear>2014</inceptionYear>
+	<inceptionYear>2015</inceptionYear>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -21,6 +21,15 @@
 		<elasticsearch.version>${elasticsearchVersion}</elasticsearch.version>
 	</properties>
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.properties</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

@@ -3,7 +3,6 @@ package ${package};
 import java.util.Collection;
 
 import ${package}.module.${pluginName}Module;
-import ${package}.module.${pluginName}RiverModule;
 import ${package}.rest.${pluginName}RestAction;
 import ${package}.service.${pluginName}Service;
 import org.elasticsearch.common.collect.Lists;
@@ -11,7 +10,6 @@ import org.elasticsearch.common.component.LifecycleComponent;
 import org.elasticsearch.common.inject.Module;
 import org.elasticsearch.plugins.AbstractPlugin;
 import org.elasticsearch.rest.RestModule;
-import org.elasticsearch.river.RiversModule;
 
 public class ${pluginName}Plugin extends AbstractPlugin {
     @Override
@@ -27,11 +25,6 @@ public class ${pluginName}Plugin extends AbstractPlugin {
     // for Rest API
     public void onModule(final RestModule module) {
         module.addRestAction(${pluginName}RestAction.class);
-    }
-
-    // for River
-    public void onModule(final RiversModule module) {
-        module.registerRiver("${riverName}", ${pluginName}RiverModule.class);
     }
 
     // for Service
