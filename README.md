@@ -43,7 +43,7 @@ Properties description is below:
 
 | Property Name        | Description           | Example             |
 |:--------------------:|:---------------------:|:-------------------:|
-| elasticsearchVersion | Elasticsearch version | 1.4.0.Beta1         |
+| elasticsearchVersion | Elasticsearch version | 1.5.2               |
 | groupId              | Project's groupId     | com.example         |
 | artifactId           | Project's artifactid  | elasticsearch-hello |
 | version              | Project's version     | 1.0-SNAPSHOT        |
@@ -57,7 +57,7 @@ For example, the command is below:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.4.0 \
+        -DarchetypeVersion=1.5.0 \
         -DgroupId=com.example \
         -DartifactId=elasticsearch-hello \
         -Dversion=1.0-SNAPSHOT \
