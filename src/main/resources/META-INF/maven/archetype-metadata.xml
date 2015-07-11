@@ -3,7 +3,7 @@
   <requiredProperties>
     <requiredProperty key="pluginName"/>
     <requiredProperty key="elasticsearchVersion">
-      <defaultValue>1.5.2</defaultValue>
+      <defaultValue>1.6.0</defaultValue>
     </requiredProperty>
     <requiredProperty key="restName">
       <defaultValue>hello</defaultValue>
