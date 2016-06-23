@@ -34,6 +34,7 @@ public class ${pluginName}Plugin extends Plugin {
         return modules;
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public Collection<Class<? extends LifecycleComponent>> nodeServices() {
         final Collection<Class<? extends LifecycleComponent>> services = Lists.newArrayList();

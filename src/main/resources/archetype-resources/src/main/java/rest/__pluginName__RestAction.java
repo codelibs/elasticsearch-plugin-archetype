@@ -27,6 +27,8 @@ public class ${pluginName}RestAction extends BaseRestHandler {
                 "/{index}/{type}/_${restName}", this);
         controller.registerHandler(RestRequest.Method.GET,
                 "/{index}/_${restName}", this);
+        controller.registerHandler(RestRequest.Method.GET,
+                "/_${restName}", this);
     }
 
     @Override
@@ -34,6 +36,9 @@ public class ${pluginName}RestAction extends BaseRestHandler {
             final RestChannel channel, Client client) {
         try {
             final XContentBuilder builder = JsonXContent.contentBuilder();
+            if (request.hasParam("pretty")) {
+                builder.prettyPrint().lfAtEnd();
+            }
             builder.startObject();
             builder.field("index", request.param("index"));
             builder.field("type", request.param("type"));

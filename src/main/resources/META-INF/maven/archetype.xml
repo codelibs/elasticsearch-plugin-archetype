@@ -2,7 +2,6 @@
 <archetype>
   <id>elasticsearch-plugin-archetype</id>
   <sources>
-    <source>src/main/java/action/IndexAction.java</source>
     <source>src/main/java/module/SampleModule.java</source>
     <source>src/main/java/rest/SampleRestAction.java</source>
     <source>src/main/java/service/SampleService.java</source>
@@ -10,7 +9,7 @@
   </sources>
   <resources>
     <resource>src/main/assemblies/plugin.xml</resource>
-    <resource>src/main/resources/es-plugin.properties</resource>
+    <resource>src/main/plugin-metadata/plugin-descriptor.properties</resource>
   </resources>
   <testSources>
   </testSources>

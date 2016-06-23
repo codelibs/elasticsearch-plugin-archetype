@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor name="sa-struts-archetype">
+<archetype-descriptor name="elasticsearch-plugin-archetype">
   <requiredProperties>
     <requiredProperty key="pluginName"/>
     <requiredProperty key="elasticsearchVersion">
-      <defaultValue>2.0.0</defaultValue>
+      <defaultValue>2.3.3</defaultValue>
     </requiredProperty>
     <requiredProperty key="restName">
       <defaultValue>hello</defaultValue>

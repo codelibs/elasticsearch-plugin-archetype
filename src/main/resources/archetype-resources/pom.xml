@@ -1,4 +1,5 @@
 #set($dollar = '$')##
+#set($pluginPackageName = $pluginName.substring(0,1).toLowerCase() + $pluginName.substring(1))##
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,8 +9,8 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>
 	<packaging>jar</packaging>
-	<description>elasticsearch ${artifactId} plugin</description>
-	<inceptionYear>2015</inceptionYear>
+	<description>elasticsearch ${pluginPackageName} plugin</description>
+	<inceptionYear>2016</inceptionYear>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -19,20 +20,11 @@
 	</licenses>
 	<properties>
 		<elasticsearch.version>${elasticsearchVersion}</elasticsearch.version>
-		<elasticsearch.plugin.classname>${package}.${artifactId}.${pluginName}Plugin</elasticsearch.plugin.classname>
+		<elasticsearch.plugin.classname>${package}.${pluginName}Plugin</elasticsearch.plugin.classname>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 	<build>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-				<includes>
-					<include>**/*.properties</include>
-				</includes>
-			</resource>
-		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -40,6 +32,7 @@
 				<configuration>
 					<source>${dollar}{maven.compiler.source}</source>
 					<target>${dollar}{maven.compiler.target}</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
