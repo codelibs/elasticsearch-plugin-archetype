@@ -10,7 +10,8 @@ You can easily create your elasticsearch plugin by this archetype.
 
 | Version   | elasticsearch |
 |:---------:|:-------------:|
-| master    | 1.5.X         |
+| master    | 2.3.X         |
+| 2.3.0     | 2.3.3         |
 | 1.5.0     | 1.5.2         |
 | 1.4.0     | 1.4.0.Beta1   |
 | 1.3.0     | 1.3.0         |
@@ -31,8 +32,8 @@ Using archetype:generate goal of Maven, run the following command:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.5.0 \
-        -DelasticsearchVersion=1.5.2 \
+        -DarchetypeVersion=2.3.0 \
+        -DelasticsearchVersion=2.3.3 \
         -DgroupId=<Your groupId> \
         -DartifactId=<your artifactId> \
         -Dversion=<your version> \
@@ -43,7 +44,7 @@ Properties description is below:
 
 | Property Name        | Description           | Example             |
 |:--------------------:|:---------------------:|:-------------------:|
-| elasticsearchVersion | Elasticsearch version | 1.5.2               |
+| elasticsearchVersion | Elasticsearch version | 2.3.3               |
 | groupId              | Project's groupId     | com.example         |
 | artifactId           | Project's artifactid  | elasticsearch-hello |
 | version              | Project's version     | 1.0-SNAPSHOT        |
@@ -57,13 +58,13 @@ For example, the command is below:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=1.5.0 \
+        -DarchetypeVersion=2.3.0 \
         -DgroupId=com.example \
         -DartifactId=elasticsearch-hello \
         -Dversion=1.0-SNAPSHOT \
         -DpluginName=Hello 
 
-## To Create Service
+## Create Service
 
 A service component is generated as \<pluginName\>Module and \<pluginName\>Service classes.
 You can put your code into \<pluginName\>Service.
@@ -71,7 +72,7 @@ You can put your code into \<pluginName\>Service.
 
 If a service is not necessary, remove \<pluginName\>Module, \<pluginName\>Service and the definistion in \<pluginName\>Plugin class.
 
-## To Create Rest API
+## Create Rest API
 
 A class file for Rest API is \<pluginName\>RestAction.
 You can put your code into \<pluginName\>RestAction.
