@@ -1,9 +1,25 @@
 #!/bin/bash
 
-VERSION=2.3.0-SNAPSHOT
+VERSION=6.6.0-SNAPSHOT
 
 JAVA_SRC_DIR=../elasticsearch-plugin-sample/src/main/java/org/codelibs/elasticsearch/sample/
 JAVA_DIR=src/main/resources/archetype-resources/src/main/java
+for file in `find $JAVA_SRC_DIR -type f` ; do
+    JAVA_FILE=`echo $file | sed -e "s,$JAVA_SRC_DIR,,"`
+    JAVA_NEW_FILE=`echo $JAVA_DIR/$JAVA_FILE | sed -e 's/Sample/__pluginName__/g'`
+    JAVA_BASE_DIR=`dirname $JAVA_NEW_FILE`
+    echo "Creating $JAVA_NEW_FILE"
+    mkdir -p $JAVA_BASE_DIR
+    sed \
+         -e 's/org.codelibs.elasticsearch.sample/\${package}/g' \
+         -e 's/Sample/\${pluginName}/g' \
+         -e 's/_sample/_\${restName}/g' \
+         -e 's/sample/\${artifactId}/g' \
+        $file > $JAVA_NEW_FILE
+done
+
+JAVA_SRC_DIR=../elasticsearch-plugin-sample/src/test/java/org/codelibs/elasticsearch/sample/
+JAVA_DIR=src/main/resources/archetype-resources/src/test/java
 for file in `find $JAVA_SRC_DIR -type f` ; do
     JAVA_FILE=`echo $file | sed -e "s,$JAVA_SRC_DIR,,"`
     JAVA_NEW_FILE=`echo $JAVA_DIR/$JAVA_FILE | sed -e 's/Sample/__pluginName__/g'`

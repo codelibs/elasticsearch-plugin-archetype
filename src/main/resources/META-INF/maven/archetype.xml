@@ -2,10 +2,9 @@
 <archetype>
   <id>elasticsearch-plugin-archetype</id>
   <sources>
-    <source>src/main/java/module/SampleModule.java</source>
-    <source>src/main/java/rest/SampleRestAction.java</source>
-    <source>src/main/java/service/SampleService.java</source>
-    <source>src/main/java/SamplePlugin.java</source>
+    <source>src/main/java/rest/Rest__pluginName__Action.java</source>
+    <source>src/main/java/__pluginName__Plugin.java</source>
+    <source>src/test/java/__pluginName__PluginTests.java</source>
   </sources>
   <resources>
     <resource>src/main/assemblies/plugin.xml</resource>
