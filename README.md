@@ -10,7 +10,7 @@ You can easily create your elasticsearch plugin by this archetype.
 
 | Version   | elasticsearch |
 |:---------:|:-------------:|
-| master    | 2.3.X         |
+| master    | 6.6.X         |
 | 2.3.0     | 2.3.3         |
 | 1.5.0     | 1.5.2         |
 | 1.4.0     | 1.4.0.Beta1   |
@@ -23,7 +23,6 @@ You can easily create your elasticsearch plugin by this archetype.
 ### Issues/Questions
 
 Please file an [issue](https://github.com/codelibs/elasticsearch-plugin-archetype/issues "issue").
-(Japanese forum is [here](https://github.com/codelibs/codelibs-ja-forum "here").)
 
 ## Usage
 
@@ -64,24 +63,13 @@ For example, the command is below:
         -Dversion=1.0-SNAPSHOT \
         -DpluginName=Hello 
 
-## Create Service
-
-A service component is generated as \<pluginName\>Module and \<pluginName\>Service classes.
-You can put your code into \<pluginName\>Service.
-\<pluginName\>Service is injected to other components in elasticsearch.
-
-If a service is not necessary, remove \<pluginName\>Module, \<pluginName\>Service and the definistion in \<pluginName\>Plugin class.
-
 ## Create Rest API
 
-A class file for Rest API is \<pluginName\>RestAction.
-You can put your code into \<pluginName\>RestAction.
-The urls to access to \<pluginName\>RestAction are:
+A class file for Rest API is Rest\<pluginName\>Action.
+You can put your code into Rest\<pluginName\>Action.
+The urls to access to Rest\<pluginName\>Action are:
 
-    http://localhost:9200/{index}/{type}/_<restName>
     http://localhost:9200/{index}/_<restName>
 
-The definistion is in a constructor of \<pluginName\>RestAction.
-
-If a rest API is not necessary, remove \<pluginName\>RestAction class and the definistion in \<pluginName\>Plugin class.
+The definistion is in a constructor of Rest\<pluginName\>Action.
 

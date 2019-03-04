@@ -1,44 +1,31 @@
 package ${package};
 
-import java.util.Collection;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Supplier;
 
-import ${package}.module.${pluginName}Module;
-import ${package}.rest.${pluginName}RestAction;
-import ${package}.service.${pluginName}Service;
-import org.elasticsearch.common.component.LifecycleComponent;
-import org.elasticsearch.common.inject.Module;
+import ${package}.rest.Rest${pluginName}Action;
+import org.elasticsearch.cluster.metadata.IndexNameExpressionResolver;
+import org.elasticsearch.cluster.node.DiscoveryNodes;
+import org.elasticsearch.common.settings.ClusterSettings;
+import org.elasticsearch.common.settings.IndexScopedSettings;
+import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.settings.SettingsFilter;
+import org.elasticsearch.plugins.ActionPlugin;
 import org.elasticsearch.plugins.Plugin;
-import org.elasticsearch.rest.RestModule;
+import org.elasticsearch.rest.RestController;
+import org.elasticsearch.rest.RestHandler;
 
-import com.google.common.collect.Lists;
-
-public class ${pluginName}Plugin extends Plugin {
+public class ${pluginName}Plugin extends Plugin implements ActionPlugin {
     @Override
-    public String name() {
-        return "${pluginName}Plugin";
-    }
-
-    @Override
-    public String description() {
-        return "This is a ${artifactId} plugin.";
-    }
-
-    public void onModule(final RestModule module) {
-        module.addRestAction(${pluginName}RestAction.class);
-    }
-
-    @Override
-    public Collection<Module> nodeModules() {
-        final Collection<Module> modules = Lists.newArrayList();
-        modules.add(new ${pluginName}Module());
-        return modules;
-    }
-
-    @SuppressWarnings("rawtypes")
-    @Override
-    public Collection<Class<? extends LifecycleComponent>> nodeServices() {
-        final Collection<Class<? extends LifecycleComponent>> services = Lists.newArrayList();
-        services.add(${pluginName}Service.class);
-        return services;
+    public List<RestHandler> getRestHandlers(final Settings settings,
+            final RestController restController,
+            final ClusterSettings clusterSettings,
+            final IndexScopedSettings indexScopedSettings,
+            final SettingsFilter settingsFilter,
+            final IndexNameExpressionResolver indexNameExpressionResolver,
+            final Supplier<DiscoveryNodes> nodesInCluster) {
+        return Arrays.asList(//
+                new Rest${pluginName}Action(settings, restController));
     }
 }
