@@ -11,6 +11,7 @@ You can easily create your elasticsearch plugin by this archetype.
 | Version   | elasticsearch |
 |:---------:|:-------------:|
 | master    | 6.6.X         |
+| 6.6.0     | 6.6.1         |
 | 2.3.0     | 2.3.3         |
 | 1.5.0     | 1.5.2         |
 | 1.4.0     | 1.4.0.Beta1   |
@@ -31,8 +32,8 @@ Using archetype:generate goal of Maven, run the following command:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=2.3.0 \
-        -DelasticsearchVersion=2.3.3 \
+        -DarchetypeVersion=6.6.0 \
+        -DelasticsearchVersion=6.6.1 \
         -DgroupId=<Your groupId> \
         -DartifactId=<your artifactId> \
         -Dversion=<your version> \
@@ -43,7 +44,7 @@ Properties description is below:
 
 | Property Name        | Description           | Example             |
 |:--------------------:|:---------------------:|:-------------------:|
-| elasticsearchVersion | Elasticsearch version | 2.3.3               |
+| elasticsearchVersion | Elasticsearch version | 6.6.1               |
 | groupId              | Project's groupId     | com.example         |
 | artifactId           | Project's artifactid  | elasticsearch-hello |
 | version              | Project's version     | 1.0-SNAPSHOT        |
@@ -57,7 +58,7 @@ For example, the command is below:
     $ mvn archetype:generate \
         -DarchetypeGroupId=org.codelibs \
         -DarchetypeArtifactId=elasticsearch-plugin-archetype \
-        -DarchetypeVersion=2.3.0 \
+        -DarchetypeVersion=6.6.0 \
         -DgroupId=com.example \
         -DartifactId=elasticsearch-hello \
         -Dversion=1.0-SNAPSHOT \
